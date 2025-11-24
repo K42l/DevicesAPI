@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace DevicesApi.Domain;
 
 //I'm cutting some corners here because I'm short on time. So I'll explain my choices.
@@ -32,6 +34,7 @@ public class Device
     }
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum DeviceStateEnum
 {
     Available = 1,

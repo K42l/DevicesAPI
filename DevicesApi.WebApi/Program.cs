@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using DevicesApi.Application;
 using DevicesApi.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,12 @@ using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+               
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string not found.");
 builder.Services.AddDbContextFactory<DeviceDbContext>(options =>
