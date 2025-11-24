@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Tests/">
+    <Project Path="DevicesApi.Tests/DevicesApi.Domain.Tests.csproj" Id="65d991ff-1279-4b53-a5fa-8eac3ca6e5be" />
+  </Folder>
+  <Project Path="DevicesApi.Application/DevicesApi.Application.csproj" Id="6b00d352-c478-4ecf-a280-5cfbba0b1894" />
+  <Project Path="DevicesApi.Domain/DevicesApi.Domain.csproj" Id="34fd7414-2b4e-4d30-b5c6-cca91841ee29" />
+  <Project Path="DevicesApi.Infrastructure/DevicesApi.Infrastructure.csproj" Id="2a074fb3-4c94-47e7-a9b7-852a5bdd9b4b" />
+  <Project Path="DevicesApi.WebApi/DevicesApi.WebApi.csproj" />
+</Solution>

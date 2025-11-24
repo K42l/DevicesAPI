@@ -1,0 +1,6 @@
+@DevicesApi.WebApi_HostAddress = http://localhost:5255
+
+GET {{DevicesApi.WebApi_HostAddress}}/devices/
+Accept: application/json
+
+###
